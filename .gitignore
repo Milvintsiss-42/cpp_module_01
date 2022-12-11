@@ -2,4 +2,5 @@
 **/.DS_Store
 **/build
 **/*.o
-ex00/zombie_horde
+ex00/zombie
+ex01/zombie_horde
