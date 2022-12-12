@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 04:13:41 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/12/11 19:40:24 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/12/11 19:43:06 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ class HumanB
 {
 private:
 	std::string _name;
-	Weapon _weapon;
+	Weapon *_weapon;
 
 public:
 	HumanB(std::string name);
 	~HumanB();
 
-	void setWeapon(Weapon weapon);
+	void setWeapon(Weapon &weapon);
 	void attack(void);
 };
 
