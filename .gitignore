@@ -6,3 +6,5 @@ ex00/zombie
 ex01/zombie_horde
 ex02/brain
 ex03/battle
+ex04/replace
+ex04/*.replace
