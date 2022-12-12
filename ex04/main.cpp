@@ -19,12 +19,12 @@ void verifyArgs(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cout << "Incorrect number of arguments" << std::endl;
+		std::cerr << "Incorrect number of arguments" << std::endl;
 		exit(1);
 	}
 	if (!*argv[1] || !*argv[2] || !*argv[3])
 	{
-		std::cout << "One or many arguments are empty" << std::endl;
+		std::cerr << "One or many arguments are empty" << std::endl;
 		exit(1);
 	}
 }
@@ -39,14 +39,14 @@ int main(int argc, char **argv)
 	std::ifstream infile(infileName);
 	if (!infile)
 	{
-		std::cout << "Error while opening infile" << std::endl;
+		std::cerr << "Error while opening infile" << std::endl;
 		return 1;
 	}
 	std::string outfileName = infileName + ".replace";
 	std::ofstream outfile(outfileName);
 	if (!outfile)
 	{
-		std::cout << "Error while creating outfile" << std::endl;
+		std::cerr << "Error while creating outfile" << std::endl;
 		return 1;
 	}
 	
