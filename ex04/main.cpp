@@ -6,12 +6,13 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 02:57:37 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/12/12 04:03:35 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/12/18 06:39:42 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 
 void replaceWordInLine(std::string &line, std::string s1, std::string s2);
 
@@ -36,14 +37,14 @@ int main(int argc, char **argv)
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
 
-	std::ifstream infile(infileName);
+	std::ifstream infile(infileName.c_str());
 	if (!infile)
 	{
 		std::cerr << "Error while opening infile" << std::endl;
 		return 1;
 	}
 	std::string outfileName = infileName + ".replace";
-	std::ofstream outfile(outfileName);
+	std::ofstream outfile(outfileName.c_str());
 	if (!outfile)
 	{
 		std::cerr << "Error while creating outfile" << std::endl;
